@@ -19,15 +19,4 @@ public class StringValidator {
                 .matches();
     }
 
-    public static boolean isDomain(String text){
-        return false;
-    }
-
-    public static boolean isCamelCase(String text){
-        return false;
-    }
-
-    public static boolean isNew(){
-        return true;
-    }
 }
