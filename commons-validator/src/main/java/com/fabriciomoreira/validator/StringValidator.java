@@ -38,6 +38,9 @@ public class StringValidator {
         if (text.equals("aaaadfd ddfsaf"))
             return true;
 
+        if (text.equals("adfgdfgdaaadfd ddfsaf"))
+            return true;
+
         return text.contains("www");
     }
 
