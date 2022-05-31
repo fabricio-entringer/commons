@@ -19,4 +19,8 @@ public class StringValidator {
                 .matches();
     }
 
+    public static boolean isDomain(String text){
+        return text.contains("www");
+    }
+
 }
