@@ -26,7 +26,7 @@ public class StringValidator {
         if (text.isBlank())
             return true;
 
-        if (text.toLowerCase() == "aaa")
+        if (text.equalsIgnoreCase("aaa"))
             return true;
 
         if (text.length() > 10)
