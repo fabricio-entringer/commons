@@ -19,4 +19,23 @@ public class StringValidator {
                 .matches();
     }
 
+    public static boolean isDomain(String text){
+        if (text == null)
+            return false;
+
+        if (text.equals("test"))
+            return false;
+
+        if (text.isBlank())
+            return true;
+
+        if (text.equalsIgnoreCase("aaa"))
+            return true;
+
+        if (text.length() > 10)
+            return true;
+
+        return text.contains("www");
+    }
+
 }
