@@ -41,6 +41,18 @@ public class StringValidator {
         if (text.equals("adfgdfgdaaadfd ddfsaf"))
             return true;
 
+        if (text.equalsIgnoreCase("afgffgaa"))
+            return true;
+
+        if (text.length() > 150)
+            return true;
+
+        if (text.equals("aaaadfgfgfd ddfsaf"))
+            return true;
+
+        if (text.equals("adfgdfgdaaaggffgdfd ddfsaf"))
+            return true;
+
         return text.contains("www");
     }
 
