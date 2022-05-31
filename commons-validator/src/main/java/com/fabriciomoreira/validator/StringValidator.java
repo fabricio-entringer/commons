@@ -20,6 +20,9 @@ public class StringValidator {
     }
 
     public static boolean isDomain(String text){
+        if (text == null)
+            return false;
+
         if (text.equals("test"))
             return false;
 
