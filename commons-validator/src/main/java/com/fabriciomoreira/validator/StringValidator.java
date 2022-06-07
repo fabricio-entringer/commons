@@ -11,7 +11,7 @@ public class StringValidator {
      * @return True if the parameter is a valid e-mail, otherwise returns false.
      */
     public static boolean isEmail(String text) {
-        if (text.isBlank())
+        if (text == null || text.isBlank())
             return false;
 
         return emailPattern
