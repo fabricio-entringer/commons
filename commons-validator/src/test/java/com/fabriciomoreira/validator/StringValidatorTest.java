@@ -31,7 +31,8 @@ public class StringValidatorTest {
             "  abc*def@mail.com,     false",
             "  abc_def@mail.com,     true",
             "  abc1def@mail.com,     true",
-            "  1abc_def@mail.com,    false"
+            "  1abc_def@mail.com,    false",
+            "                   ,    false"
 
     })
     @DisplayName("Should validate all e-mails from the list.")

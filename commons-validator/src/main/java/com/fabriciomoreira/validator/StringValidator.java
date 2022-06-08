@@ -11,37 +11,12 @@ public class StringValidator {
      * @return True if the parameter is a valid e-mail, otherwise returns false.
      */
     public static boolean isEmail(String text) {
-        if (text.isBlank())
+        if (text == null || text.isBlank())
             return false;
 
         return emailPattern
                 .matcher(text)
                 .matches();
-    }
-
-    public static boolean isDomain(String text){
-        if (text == null)
-            return false;
-
-        if (text.equals("test"))
-            return false;
-
-        if (text.isBlank())
-            return true;
-
-        if (text.equalsIgnoreCase("aaa"))
-            return true;
-
-        if (text.length() > 10)
-            return true;
-
-        if (text.equals("aaaadfd ddfsaf"))
-            return true;
-
-        if (text.equals("adfgdfgdaaadfd ddfsaf"))
-            return true;
-
-        return text.contains("www");
     }
 
 }
