@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StringValidatorTest {
+class StringValidatorTest {
 
     @ParameterizedTest
     @CsvSource({
@@ -36,7 +36,7 @@ public class StringValidatorTest {
 
     })
     @DisplayName("Should validate all e-mails from the list.")
-    public void email_test1(final String sText, final String sResult){
+    void email_test1(final String sText, final String sResult){
         // Given
         var isValid = Boolean.parseBoolean(sResult);
         // When
