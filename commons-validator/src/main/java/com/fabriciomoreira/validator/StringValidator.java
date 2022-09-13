@@ -11,7 +11,7 @@ public class StringValidator {
 
     private static final String EMAIL_REGEX_USER = "^[a-z][a-zA-Z0-9'+./=^_`{|}~-]+";
     private static final String EMAIL_REGEX_DOMAIN = "@((\\[\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}";
-    private static final String EMAIL_REGEX_SUFFIX = "\\.\\d{1,3}])|((\\w+\\.)+[a-zA-Z]{2,}))$";
+    private static final String EMAIL_REGEX_SUFFIX = "\\.\\d{1,3}])|(\\w+\\.+[a-zA-Z]{2,}))$";
     private static final Pattern emailPattern = Pattern.compile(EMAIL_REGEX_USER + EMAIL_REGEX_DOMAIN + EMAIL_REGEX_SUFFIX);
 
     private StringValidator() {

@@ -1,6 +1,5 @@
 package com.fabriciomoreira.validator;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -18,7 +17,7 @@ class StringValidatorTest {
             "  text@gmail?com,       false",
             "  a@gmail.com,          false",
             "  textgmail.com,        false",
-            "  text@gmail.com.com,   true",
+            "  text@gmail.com.com,   false",
             "  abc-d@mail.com,       true",
             "  abc.def@mail.com,     true",
             "  .abc@mail.com,        false",
@@ -36,7 +35,7 @@ class StringValidatorTest {
 
     })
     @DisplayName("Should validate all e-mails from the list.")
-    void email_test1(final String sText, final String sResult){
+    void email_test1(final String sText, final String sResult) {
         // Given
         var isValid = Boolean.parseBoolean(sResult);
         // When
