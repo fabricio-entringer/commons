@@ -26,10 +26,12 @@ public class StringValidator {
      * <p>
      * It's important to remember that the method doesn't check if the e-mail is registered in the domain or not!
      * Only the e-mail string format is checked with.
+     * <p>
      *
-     * @since v 0.0.2-SNAPSHOT
      * @param mailAddress The e-mail address that must be verified.
      * @return True if the parameter is a valid e-mail, otherwise returns false.
+     * @author <a href="https://github.com/fabricio-entringer">Fabricio Entringer</a>
+     * @since v 0.0.2-SNAPSHOT
      */
     public static boolean isEmail(String mailAddress) {
         if (mailAddress == null || mailAddress.isBlank())
@@ -39,5 +41,7 @@ public class StringValidator {
                 .matcher(mailAddress)
                 .matches();
     }
+
+
 
 }
