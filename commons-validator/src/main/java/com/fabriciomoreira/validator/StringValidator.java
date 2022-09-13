@@ -21,8 +21,9 @@ public class StringValidator {
      * Check if the e-mail address passed as parameter has all attributes to be considered a valid e-mail.
      * <p>
      * Ex.:
-     * - An @ character.
-     * - The domain with a suffix (com, io, etc.) separated by ".".
+     * <br>
+     * <li>An @ character.</li>
+     * <li>The domain with a suffix (com, io, etc.) separated by ".".</li>
      * <p>
      * It's important to remember that the method doesn't check if the e-mail is registered in the domain or not!
      * Only the e-mail string format is checked with.
