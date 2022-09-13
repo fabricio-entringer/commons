@@ -3,7 +3,7 @@ package com.fabriciomoreira.validator;
 import java.util.regex.Pattern;
 
 /**
- * StringValidator aggregate all methods that aim to validate the string content or behavior.
+ * StringValidator class aggregates all methods that aim to validate the string content or behavior.
  *
  * @since v 0.0.2-SNAPSHOT
  */
@@ -19,11 +19,11 @@ public class StringValidator {
 
     /**
      * Check if the e-mail address passed as parameter has all attributes to be considered a valid e-mail.
-     * <br>
+     * <p>
      * Ex.:
      * - An @ character.
      * - The domain with a suffix (com, io, etc.) separated by ".".
-     * <br>
+     * <p>
      * It's important to remember that the method doesn't check if the e-mail is registered in the domain or not!
      * Only the e-mail string format is checked with.
      *
