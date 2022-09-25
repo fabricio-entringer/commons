@@ -1,8 +1,12 @@
 package com.fabriciomoreira.validator;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -54,5 +58,51 @@ class StringValidatorTest {
         var result = StringValidator.isEmail(sText);
         // Then
         assertEquals(isValid, result);
+    }
+
+    @Test
+    @DisplayName("Should test all possibilities for convert collection in string with separator with NON-NULL elements.")
+    void buildStringSeparatedBy_test1() {
+        // Given
+        List<String> strings = new ArrayList<>() {{
+            add("ITEM 1");
+            add("ITEM 2");
+            add("ITEM 3");
+        }};
+        // When
+        String result = StringValidator.buildStringSeparatedBy(strings, ";");
+        // Then
+        System.out.println(result);
+        assertEquals("ITEM 1;ITEM 2;ITEM 3", result);
+    }
+
+    @Test
+    @DisplayName("Should test all possibilities for convert collection in string with separator with NULL elements.")
+    void buildStringSeparatedBy_test2() {
+        // Given
+        List<String> strings = new ArrayList<>() {{
+            add("ITEM 1");
+            add(null);
+            add("ITEM 3");
+        }};
+        // When
+        String result = StringValidator.buildStringSeparatedBy(strings, ";");
+        // Then
+        System.out.println(result);
+        assertEquals("ITEM 1;;ITEM 3", result);
+    }
+
+    @Test
+    @DisplayName("Should test for collection null and empty.")
+    void buildStringSeparatedBy_test3() {
+        // Given
+        List<String> strings1 = null;
+        List<String> strings2 = new ArrayList<>();
+        // When
+        String result1 = StringValidator.buildStringSeparatedBy(strings1, ";");
+        String result2 = StringValidator.buildStringSeparatedBy(strings2, ";");
+        // Then
+        assertEquals("", result1);
+        assertEquals("", result2);
     }
 }
