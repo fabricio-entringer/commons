@@ -100,7 +100,7 @@ class StringValidatorTest {
         List<String> strings2 = new ArrayList<>();
         // When
         String result1 = StringValidator.buildStringSeparatedBy(strings1, ";");
-        String result2 = StringValidator.buildStringSeparatedBy(strings1, ";");
+        String result2 = StringValidator.buildStringSeparatedBy(strings2, ";");
         // Then
         assertEquals("", result1);
         assertEquals("", result2);
