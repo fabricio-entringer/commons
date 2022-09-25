@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class StringValidatorTest {
 
@@ -63,9 +62,9 @@ class StringValidatorTest {
 
     @Test
     @DisplayName("Should test all possibilities for convert collection in string with separator with NON-NULL elements.")
-    void buildStringSeparatedBy_test1(){
+    void buildStringSeparatedBy_test1() {
         // Given
-        List<String> strings = new ArrayList<>(){{
+        List<String> strings = new ArrayList<>() {{
             add("ITEM 1");
             add("ITEM 2");
             add("ITEM 3");
@@ -79,9 +78,9 @@ class StringValidatorTest {
 
     @Test
     @DisplayName("Should test all possibilities for convert collection in string with separator with NULL elements.")
-    void buildStringSeparatedBy_test2(){
+    void buildStringSeparatedBy_test2() {
         // Given
-        List<String> strings = new ArrayList<>(){{
+        List<String> strings = new ArrayList<>() {{
             add("ITEM 1");
             add(null);
             add("ITEM 3");
@@ -95,7 +94,7 @@ class StringValidatorTest {
 
     @Test
     @DisplayName("Should test for collection null and empty.")
-    void buildStringSeparatedBy_test3(){
+    void buildStringSeparatedBy_test3() {
         // Given
         List<String> strings1 = null;
         List<String> strings2 = new ArrayList<>();
@@ -104,6 +103,6 @@ class StringValidatorTest {
         String result2 = StringValidator.buildStringSeparatedBy(strings1, ";");
         // Then
         assertEquals("", result1);
-        assertEquals("",result2);
+        assertEquals("", result2);
     }
 }

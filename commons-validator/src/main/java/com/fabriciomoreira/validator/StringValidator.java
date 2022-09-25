@@ -46,10 +46,10 @@ public class StringValidator {
      * separator parameter.
      *
      * <p>No separator is added before or after the list. Null objects or empty
-     *    strings within the iteration are represented by empty strings.</p>
+     * strings within the iteration are represented by empty strings.</p>
      *
      * @param collection The collection object (@link Iterable>) to join into a unique string.
-     * @param separator The character used to separate the items from the collection.
+     * @param separator  The character used to separate the items from the collection.
      * @return The joined String, {@code ""} if the collection is empty or null.
      */
     public static String buildStringSeparatedBy(Iterable<?> collection, String separator) {
@@ -58,9 +58,7 @@ public class StringValidator {
         }
         StringBuilder stringBuilder = new StringBuilder();
         collection.forEach(it -> stringBuilder.append(it != null ? it.toString() : "").append(separator));
-        return stringBuilder.substring(0, stringBuilder.length()-1);
+        return stringBuilder.substring(0, stringBuilder.length() - 1);
     }
-
-
 
 }
