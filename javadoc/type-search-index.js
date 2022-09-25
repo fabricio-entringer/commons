@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.fabriciomoreira.validator","l":"DateValidator"},{"p":"com.fabriciomoreira.validator","l":"ObjectValidator"},{"p":"com.fabriciomoreira.validator","l":"StringValidator"}]
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.fabriciomoreira.validator","l":"DateValidator"},{"p":"com.fabriciomoreira.validator","l":"ObjectValidator"},{"p":"com.fabriciomoreira.validator","l":"StringValidator"}];updateSearchResults();
