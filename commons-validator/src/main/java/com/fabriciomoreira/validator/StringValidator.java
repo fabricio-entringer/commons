@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
 public class StringValidator {
     private static final String EMAIL_REGEX = "^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\\.[a-zA-Z.]{2,18}$";
     private static final Pattern emailPattern = Pattern.compile(EMAIL_REGEX);
+    private static final String EMPTY = "";
 
     private StringValidator() {
     }
@@ -38,6 +39,26 @@ public class StringValidator {
         return emailPattern
                 .matcher(mailAddress)
                 .matches();
+    }
+
+    /**
+     * Joins the element of the provided collection component into a single string separated by the
+     * separator parameter.
+     *
+     * <p>No separator is added before or after the list. Null objects or empty
+     *    strings within the iteration are represented by empty strings.</p>
+     *
+     * @param collection The collection object (@link Iterable>) to join into a unique string.
+     * @param separator The character used to separate the items from the collection.
+     * @return The joined String, {@code ""} if the collection is empty or null.
+     */
+    public static String buildStringSeparatedBy(Iterable<?> collection, String separator) {
+        if (collection == null || !collection.iterator().hasNext()) {
+            return EMPTY;
+        }
+        StringBuilder stringBuilder = new StringBuilder();
+        collection.forEach(it -> stringBuilder.append(it != null ? it.toString() : "").append(separator));
+        return stringBuilder.substring(0, stringBuilder.length()-1);
     }
 
 
