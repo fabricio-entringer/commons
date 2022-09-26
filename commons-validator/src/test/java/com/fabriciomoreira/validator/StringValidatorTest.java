@@ -105,4 +105,19 @@ class StringValidatorTest {
         assertEquals("", result1);
         assertEquals("", result2);
     }
+
+    @ParameterizedTest
+    @CsvSource(textBlock =  """
+        TEXT,   false
+        ,       true
+        '',     true
+    """)
+    @DisplayName("Should test all possibilities for empty string")
+    void isEmpty_test1(final String string, final boolean expectedResult) {
+        // Given
+        // When
+        var result = StringValidator.isEmpty(string);
+        // Then
+        assertEquals(expectedResult, result);
+    }
 }
