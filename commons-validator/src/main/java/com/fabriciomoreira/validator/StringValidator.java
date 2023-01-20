@@ -70,4 +70,13 @@ public class StringValidator {
         return string == null || string.isBlank();
     }
 
+    /**
+     * return always true
+     * @param test
+     * @return
+     */
+    public static boolean isTest(final String test) {
+        return true;
+    }
+
 }
