@@ -19,12 +19,16 @@
 
     <modules>
         <module>commons-validator</module>
+        <module>commons-utils</module>
     </modules>
 
     <name>commons</name>
     <url>https://github.com/fabricio-entringer/commons</url>
 
     <properties>
+        <java.version>17</java.version>
+        <source>17</source> 
+        <target>17</target> 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>

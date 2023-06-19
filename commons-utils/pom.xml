@@ -9,8 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>commons-validator</artifactId>
-    <name>commons-validator</name>
+    <artifactId>commons-utils</artifactId>
+    <name>commons-utils</name>
     <packaging>jar</packaging>
     <url>https://github.com/fabricio-entringer/commons</url>
 
