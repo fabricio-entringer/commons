@@ -1,6 +1,9 @@
 package com.fabriciomoreira.utils;
 
-public class DateUtils {
+import java.util.Calendar;
+import java.util.Date;
+
+public final class DateUtils {
 
     /**
      * <p>Checks if two dates are on the same day ignoring time.</p>
