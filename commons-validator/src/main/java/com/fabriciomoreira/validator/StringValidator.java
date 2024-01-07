@@ -68,6 +68,7 @@ public class StringValidator {
      */
     public static boolean isEmpty(final String string) {
         return string == null || string.isBlank();
+
     }
 
     /**
