@@ -67,7 +67,9 @@ public class StringValidator {
      * @return true if the string object is null, if length = 0 or contains are white space. Otherwise, false.
      */
     public static boolean isEmpty(final String string) {
+
         return string == null || string.isBlank();
+
     }
 
     /**
